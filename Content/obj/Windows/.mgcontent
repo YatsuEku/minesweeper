@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/braja/Documents/Visual Studio Projects/Games/Games/Saper/Content/Text/BombsCount.spritefont</File>
+    <File>C:/Users/braja/Documents/Visual Studio Projects/Games/Games/Saper/Content/Textures/1.png</File>
+    <File>C:/Users/braja/Documents/Visual Studio Projects/Games/Games/Saper/Content/Textures/2.png</File>
+    <File>C:/Users/braja/Documents/Visual Studio Projects/Games/Games/Saper/Content/Textures/3.png</File>
+    <File>C:/Users/braja/Documents/Visual Studio Projects/Games/Games/Saper/Content/Textures/4.png</File>
+    <File>C:/Users/braja/Documents/Visual Studio Projects/Games/Games/Saper/Content/Textures/5.png</File>
+    <File>C:/Users/braja/Documents/Visual Studio Projects/Games/Games/Saper/Content/Textures/6.png</File>
+    <File>C:/Users/braja/Documents/Visual Studio Projects/Games/Games/Saper/Content/Textures/7.png</File>
+    <File>C:/Users/braja/Documents/Visual Studio Projects/Games/Games/Saper/Content/Textures/8.png</File>
+    <File>C:/Users/braja/Documents/Visual Studio Projects/Games/Games/Saper/Content/Textures/bomb.png</File>
+    <File>C:/Users/braja/Documents/Visual Studio Projects/Games/Games/Saper/Content/Textures/empty.png</File>
+    <File>C:/Users/braja/Documents/Visual Studio Projects/Games/Games/Saper/Content/Textures/flag.png</File>
+    <File>C:/Users/braja/Documents/Visual Studio Projects/Games/Games/Saper/Content/Textures/Layer.png</File>
+    <File>C:/Users/braja/Documents/Visual Studio Projects/Games/Games/Saper/Content/Textures/ResetButton.png</File>
+    <File>C:/Users/braja/Documents/Visual Studio Projects/Games/Games/Saper/Content/Textures/squere.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>
