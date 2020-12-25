@@ -7,10 +7,10 @@ using System.Diagnostics;
 
 namespace Saper
 {
-	public class SaperGame : Game
+    public class SaperGame : Game
     {
-        private const int WINDOW_WIDTH = 400;
-        private const int WINDOW_HEIGHT = 700;
+		private const int WINDOW_WIDTH = 400;
+		private const int WINDOW_HEIGHT = 700;
 
         private const int ROW_SIZE = 8;
         private const int COL_SIZE = 10;
@@ -99,7 +99,7 @@ namespace Saper
         protected override void Update(GameTime gameTime)
         {
             for(int i = 1; i <= COL_SIZE; i++)
-			{
+	    	{
                 for(int j = 1; j <= ROW_SIZE; j++)
 				{
                     if(_gameState != GameState.GameOver)
@@ -131,12 +131,11 @@ namespace Saper
                         }
                     }
                 }
-			}
+            }
 
             _resetButton.Clicked += OnResetButtonClicked;
 
             GC.Collect();
-            
 
             _entityManager.Update(gameTime);
 
@@ -157,7 +156,7 @@ namespace Saper
         }
 
         private void InitGame()
-		{
+	{
             GC.WaitForPendingFinalizers();
 
             _bombs = 0;
@@ -242,7 +241,7 @@ namespace Saper
         private bool Floodfill(int row, int col)
 		{
             if(_cells[row, col].State == CellState.Reveal)
-			{
+	    	{
                 if(_cells[row, col].isEmpty)
                     _cells[row, col].State = CellState.Empty;
 
@@ -262,7 +261,7 @@ namespace Saper
                 Floodfill(row + 1, col - 1);
                 Floodfill(row + 1, col);
                 Floodfill(row + 1, col + 1);
-			}
+	    	}
 
             return false;
         }
@@ -278,5 +277,5 @@ namespace Saper
             _gameState = GameState.GameOver;
 		}
 		#endregion
-	}
+    }
 }
