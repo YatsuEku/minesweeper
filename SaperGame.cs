@@ -85,6 +85,10 @@ namespace Saper
             _resetButton = new Button(new Sprite(_buttonReset, 0, 0, RESET_BUTTON_WIDTH, RESET_BUTTON_HEIGHT), new Vector2(227, 46));
             _resetButton.DrawOrder = 2;
 
+            for(int i = 0; i < COL_SIZE + 2; i++)
+                for(int j = 0; j < ROW_SIZE + 2; j++)
+                    _cells[j, i] = new Cell(new Sprite(Textures.textures["squere"], 50, 50), new Vector2((j * 50) - 50, (LAYER_HEIGHT + i * 50) - 50));
+
             InitGame();
 
             _entityManager.AddEntity(_layerSprite);
@@ -131,6 +135,9 @@ namespace Saper
 
             _resetButton.Clicked += OnResetButtonClicked;
 
+            GC.Collect();
+            
+
             _entityManager.Update(gameTime);
 
             base.Update(gameTime);
@@ -151,13 +158,9 @@ namespace Saper
 
         private void InitGame()
 		{
-            _bombs = 0;
+            GC.WaitForPendingFinalizers();
 
-            for(int i = 0; i < COL_SIZE + 2; i++)
-            {
-                for(int j = 0; j < ROW_SIZE + 2; j++)
-                    _cells[j, i] = new Cell(new Sprite(Textures.textures["squere"], 50, 50), new Vector2((j * 50) - 50, (LAYER_HEIGHT + i * 50) - 50));
-            }
+            _bombs = 0;
 
             int bombCount = 0;
 
@@ -229,7 +232,9 @@ namespace Saper
             foreach(var cell in _cells)
                 _entityManager.RemoveEntity(cell);
 
-            Array.Clear(_cells, 0, _cells.Length);
+            for(int i = 0; i < COL_SIZE + 2; i++)
+                for(int j = 0; j < ROW_SIZE + 2; j++)
+                    _cells[j, i].Reset();
 
             InitGame();
 		}
